@@ -1,0 +1,258 @@
+{
+  "id": "nanobot-onboarding",
+  "title": "nanobot Codebase Onboarding",
+  "description": "Learn the structure and key components of nanobot - an ultra-lightweight personal AI assistant",
+  "version": "1.0.0",
+  "audience": "New Developers",
+  "prerequisites": [
+    "Basic understanding of Python and AI agents"
+  ],
+  "steps": [
+    {
+      "id": "step-1-overview",
+      "title": "Welcome to nanobot",
+      "description": "nanobot is an ultra-lightweight personal AI assistant (~4,000 lines of code) inspired by Clawdbot. This tour will guide you through the core architecture and key components.",
+      "estimatedTime": 60,
+      "colorMode": "fileTypes"
+    },
+    {
+      "id": "step-2-core-architecture",
+      "title": "Core Agent Architecture",
+      "description": "The heart of nanobot - the agent loop, memory management, and skills system that power the AI assistant.",
+      "estimatedTime": 120,
+      "focusDirectory": "nanobot/agent",
+      "highlightLayers": [
+        {
+          "id": "core-agent-layer",
+          "name": "Core Agent Components",
+          "color": "#3b82f6",
+          "items": [
+            {
+              "path": "nanobot/agent/loop.py",
+              "type": "file"
+            },
+            {
+              "path": "nanobot/agent/context.py",
+              "type": "file"
+            },
+            {
+              "path": "nanobot/agent/memory.py",
+              "type": "file"
+            },
+            {
+              "path": "nanobot/agent/skills.py",
+              "type": "file"
+            }
+          ],
+          "opacity": 0.8,
+          "renderStrategy": "border"
+        }
+      ],
+      "interactiveActions": [
+        {
+          "type": "click-file",
+          "description": "Click loop.py to see the main agent execution logic",
+          "target": "nanobot/agent/loop.py"
+        }
+      ],
+      "colorMode": "fileTypes"
+    },
+    {
+      "id": "step-3-tools-system",
+      "title": "Built-in Tools System",
+      "description": "Explore the comprehensive tool system that enables nanobot to interact with files, shell, web, and spawn subagents.",
+      "estimatedTime": 90,
+      "focusDirectory": "nanobot/agent/tools",
+      "highlightLayers": [
+        {
+          "id": "tools-layer",
+          "name": "Essential Tools",
+          "color": "#10b981",
+          "items": [
+            {
+              "path": "nanobot/agent/tools/filesystem.py",
+              "type": "file"
+            },
+            {
+              "path": "nanobot/agent/tools/shell.py",
+              "type": "file"
+            },
+            {
+              "path": "nanobot/agent/tools/web.py",
+              "type": "file"
+            },
+            {
+              "path": "nanobot/agent/tools/spawn.py",
+              "type": "file"
+            }
+          ],
+          "opacity": 0.7,
+          "renderStrategy": "glow"
+        }
+      ],
+      "colorMode": "fileTypes"
+    },
+    {
+      "id": "step-4-skills-framework",
+      "title": "Skills Framework",
+      "description": "Discover the modular skills system - bundling specialized capabilities like GitHub integration, weather, tmux, and more.",
+      "estimatedTime": 90,
+      "focusDirectory": "nanobot/skills",
+      "highlightLayers": [
+        {
+          "id": "skills-layer",
+          "name": "Available Skills",
+          "color": "#8b5cf6",
+          "items": [
+            {
+              "path": "nanobot/skills/github",
+              "type": "directory"
+            },
+            {
+              "path": "nanobot/skills/weather",
+              "type": "directory"
+            },
+            {
+              "path": "nanobot/skills/tmux",
+              "type": "directory"
+            },
+            {
+              "path": "nanobot/skills/README.md",
+              "type": "file"
+            }
+          ],
+          "opacity": 0.7,
+          "renderStrategy": "border"
+        }
+      ],
+      "interactiveActions": [
+        {
+          "type": "hover-directory",
+          "description": "Hover over skill directories to see available integrations",
+          "target": "nanobot/skills"
+        }
+      ],
+      "colorMode": "fileTypes"
+    },
+    {
+      "id": "step-5-communication-channels",
+      "title": "Multi-Channel Communication",
+      "description": "Learn how nanobot connects users through Telegram, WhatsApp, and Feishu channels.",
+      "estimatedTime": 90,
+      "focusDirectory": "nanobot/channels",
+      "highlightLayers": [
+        {
+          "id": "channels-layer",
+          "name": "Communication Channels",
+          "color": "#f59e0b",
+          "items": [
+            {
+              "path": "nanobot/channels/telegram.py",
+              "type": "file"
+            },
+            {
+              "path": "nanobot/channels/whatsapp.py",
+              "type": "file"
+            },
+            {
+              "path": "nanobot/channels/feishu.py",
+              "type": "file"
+            },
+            {
+              "path": "nanobot/channels/manager.py",
+              "type": "file"
+            }
+          ],
+          "opacity": 0.7,
+          "renderStrategy": "border"
+        }
+      ],
+      "colorMode": "fileTypes"
+    },
+    {
+      "id": "step-6-providers-integration",
+      "title": "LLM Providers",
+      "description": "See how nanobot integrates with multiple LLM providers including OpenRouter, Anthropic, DeepSeek, and more.",
+      "estimatedTime": 90,
+      "focusDirectory": "nanobot/providers",
+      "highlightLayers": [
+        {
+          "id": "providers-layer",
+          "name": "LLM Provider Integrations",
+          "color": "#ef4444",
+          "items": [
+            {
+              "path": "nanobot/providers/litellm_provider.py",
+              "type": "file"
+            },
+            {
+              "path": "nanobot/providers/transcription.py",
+              "type": "file"
+            }
+          ],
+          "opacity": 0.7,
+          "renderStrategy": "border"
+        }
+      ],
+      "colorMode": "fileTypes"
+    },
+    {
+      "id": "step-7-configuration-setup",
+      "title": "Configuration & Setup",
+      "description": "Understanding the project configuration and entry points for getting started.",
+      "estimatedTime": 60,
+      "highlightLayers": [
+        {
+          "id": "config-layer",
+          "name": "Configuration & Entry Points",
+          "color": "#64748b",
+          "items": [
+            {
+              "path": "pyproject.toml",
+              "type": "file"
+            },
+            {
+              "path": "README.md",
+              "type": "file"
+            },
+            {
+              "path": "nanobot/__main__.py",
+              "type": "file"
+            },
+            {
+              "path": "nanobot/config",
+              "type": "directory"
+            }
+          ],
+          "opacity": 0.7,
+          "renderStrategy": "border"
+        }
+      ],
+      "interactiveActions": [
+        {
+          "type": "click-file",
+          "description": "Click README.md for detailed setup instructions",
+          "target": "README.md"
+        }
+      ],
+      "colorMode": "fileTypes"
+    },
+    {
+      "id": "step-8-next-steps",
+      "title": "Next Steps & Contribution",
+      "description": "You've completed the tour! Ready to contribute? Check out the project roadmap, run tests, or start building your own skills. The codebase is intentionally small and readable - perfect for contributions!",
+      "estimatedTime": 45,
+      "colorMode": "git"
+    }
+  ],
+  "metadata": {
+    "author": "nanobot team",
+    "createdAt": "2026-02-05T16:30:00.000Z",
+    "tags": [
+      "onboarding",
+      "ai-agent",
+      "python",
+      "tutorial"
+    ]
+  }
+}
