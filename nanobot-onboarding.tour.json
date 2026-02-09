@@ -201,6 +201,7 @@
       "title": "Configuration & Setup",
       "description": "Understanding the project configuration and entry points for getting started.",
       "estimatedTime": 60,
+      "focusDirectory": "",
       "highlightLayers": [
         {
           "id": "config-layer",
@@ -242,6 +243,7 @@
       "title": "Next Steps & Contribution",
       "description": "You've completed the tour! Ready to contribute? Check out the project roadmap, run tests, or start building your own skills. The codebase is intentionally small and readable - perfect for contributions!",
       "estimatedTime": 45,
+      "focusDirectory": "",
       "colorMode": "git"
     }
   ],
